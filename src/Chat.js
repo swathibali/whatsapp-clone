@@ -1,9 +1,24 @@
-import React from 'react'
+import React,{ useState }from 'react'
 import './Chat.css'
 import { IconButton, Avatar } from  '@material-ui/core'
-import { AttachFile,MoreVert,SearchOutlined} from '@material-ui/icons'
+import { AttachFile, MoreVert, SearchOutlined} from '@material-ui/icons'
+import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
+import axios from './axios'
 
-function Chat() {
+function Chat({ messages }) {
+    const [input, setInput] = useState('')
+
+    const sendMessage =(e) =>{
+        e.preventDefault()
+        axios.post('/messages/new',{
+            message:input,
+            name:"swathi",
+            timestamp:"just now",
+            recieved:false
+        })
+        setInput('')
+    }
     return (
         <div className="chat">
             <div className="chat__header">
@@ -24,14 +39,37 @@ function Chat() {
                     </IconButton>
                 </div>
             </div>
-            <div className="chat__bdy">
-                <p>
-                    <span className="chat__name">Swathi</span>
-                    This is massage
-                    <span className="chat__timestamp">
-                        {new Date().toUTCString()}
-                    </span>
-                </p>
+            <div className="chat__body">
+                {messages.map((message,msgIndex) =>(
+                    <p 
+                        key ={msgIndex} 
+                        className={message.received ?'chat__message':'chat__message chat__reciever'}
+                    >
+                        <span className="chat__name">{message.name}</span>
+                        {message.message}
+                        <span className="chat__timestamp">
+                            {message.timestamp}
+                        </span>
+                    </p>
+                ))}
+            </div>
+            <div className="chat__footer">
+                <InsertEmoticonIcon />
+                <form>
+                    <input
+                        value={input}
+                        onChange={e => setInput(e.target.value)}
+                        placeholder='Type a message'
+                        type='text'
+                    />
+                    <button 
+                        onClick={sendMessage}
+                        type='sumbit'
+                    >
+                        Send a Message
+                    </button>
+                </form>
+                <KeyboardVoiceIcon />
             </div>
         </div>
     )

@@ -13,3 +13,13 @@
   width:90vw;
   box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.75);
 }
+.chat__footer > form {
+  flex:1;
+  display:flex;
+}
+.chat__footer > form >input {
+  flex:1;
+  border-radius: 30px;
+  padding:none;
+  border:none;
+}
