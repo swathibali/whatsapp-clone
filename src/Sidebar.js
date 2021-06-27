@@ -8,6 +8,9 @@ import MoreVertIcon from '@material-ui/icons/MoreVert'
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 
 function Sidebar() {
+    const createRoom =() =>{
+
+    }
     return (
         <div className="sidebar">
            <div className="sidebar__header">
@@ -17,7 +20,7 @@ function Sidebar() {
                         <DonutLargeIcon />
                    </IconButton>
                    <IconButton>
-                        <ChatIcon />
+                        <ChatIcon onClick={createRoom}/>
                    </IconButton>
                    <IconButton>
                         <MoreVertIcon />

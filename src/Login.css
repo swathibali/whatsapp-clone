@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font: 100% 'Roboto', arial, sans-serif;
+    background: #f5f5f5;
+  }
+  
+  form {
+    padding: 32px;
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 380px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+  }
+  
+  h1 {
+    margin-top: 0;
+    margin-bottom: 3.236rem;
+    text-align: center;
+    font-size: 1.618rem;
+  }
+  
+  .form-group {
+    padding: 0;
+    border: 0;
+    margin-top: 1rem;  
+  }
+  
+  label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: .75rem;
+    text-transform: uppercase;
+    touch-action: manipulation;
+  }
+  
+  input{
+    display: block;
+    padding: .5rem .75rem;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #eee;
+    border-left: 0;
+    border-radius:3px;
+    @include transition;
+    
+  
+  }
+  input:focus {
+      outline: 0;
+      border-bottom-color: #ffab00;
+    }
+  
+  .btn {
+    display: inline-block;
+    padding: .75rem 1rem;
+    margin-top: 1.618rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #ffab00;
+    border: 1px solid transparent;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+    cursor: pointer;
+    user-select: none;
+    @include transition;  
+   
+  }
+  #guestButton{
+    margin-top: 0;
+  }
+  .btn:focus,.btn:hover {
+    background-color: lighten(#ffab00, 13%);
+    box-shadow: 0 18px 35px rgba(50,50,93,.1),0 8px 15px rgba(0,0,0,.07);
+  }
+  .btn:focus {
+      outline: 0;
+    }
