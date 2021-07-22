@@ -1,0 +1,57 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+   flex:0.35;
+   border: 1px solid rgb(224, 224, 222);
+   /* outline: 1px solid green; */
+   
+}
+
+
+.sidebar__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+    border: 1px solid rgb(224, 224, 223);
+    
+
+}
+.sidebar__hearderRight{
+    display: flex;
+    justify-content: space-between;
+    min-width: 8vw;
+    /* outline: 1px solid blueviolet; */
+  
+
+}
+.sidebar_search{
+    display: flex;
+    
+    justify-content: flex-start;
+    background-color: white;
+    margin: 10px;
+    padding: 9px;
+    border-radius: 20px;
+    /* flex:1 0 auto; */
+  
+    /* outline: 1px solid green; */
+}
+
+.sidebar_search > input {
+     border: none;
+     outline: none;
+}
+
+.sidebar_chats{
+    flex:1 0 auto;
+    background-color: white;
+    overflow: scroll;
+    height : 55vh;
+   
+}
+span{
+    font-weight: 600;
+    margin-left: 2px;
+}

@@ -1,0 +1,91 @@
+.chat{
+    display: flex;
+    flex: 0.65;
+    flex-direction:column;
+    /* background-color: rgb(72, 72, 214); */
+    /* outline: 5px solid yellow; */
+    }
+.chart__header{
+    display: flex;
+    justify-content: space-evenly;
+    
+    align-content: center;
+    border:1px solid white;
+}
+.chart__headerLeft{
+    
+    flex: 1;
+    
+}
+
+.chart__headerRight{
+    display: flex;
+    justify-content:space-evenly;
+    align-content: center;
+    padding: 20px;
+    width: 10vw;
+    margin-top: 10px;
+    
+}
+
+
+.chart__body{
+    flex:1;
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    padding:30px;
+    overflow-y: scroll;
+    
+}
+
+
+
+
+.chat__text{
+       background-color: #ffffff;
+       width: fit-content;
+       border-radius: 20px;
+       padding:8px;
+       position: relative;
+       
+
+}
+.chat__name{
+    position: absolute;
+    top:-17px;
+    font-size: small;
+}
+.chat__time{
+
+    font-size: xx-small;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.chat__reciver{
+    margin-left: auto;
+    background-color: rgb(204, 236, 171);
+}
+.chart__footer{
+    display: flex;
+    padding: 15px;
+    /* outline: 2px solid red; */
+    
+}
+.chart__footer__left{
+   flex: 1;;
+    display: flex;
+    justify-content: flex-end;
+}
+.chart__footer__left >input{
+    flex:1;
+    border: none;
+    outline: none;
+    width: auto;
+    border-radius: 10px;
+
+}
+.chart__footer__left >button{
+    display: none;
+}
+.chart__body > p{
+    margin-top: 50px;
+}
